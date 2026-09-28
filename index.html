@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sílabo | Evaluaciones Inteligentes, Auténticas y por Competencias</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --pink:#FF0E49;
+  --pink-dark:#D90043;
+  --dark:#171416;
+  --dark-2:#241F21;
+  --wine:#4A1026;
+  --ink:#2E292B;
+  --muted:#746C70;
+  --line:#E4DDE0;
+  --soft:#FFF2F6;
+  --soft-2:#FAF8F9;
+  --paper:#FFFFFF;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 7% 4%,rgba(255,14,73,.08),transparent 22%),
+    linear-gradient(180deg,#F1EEF0 0%,#F8F6F7 45%,#ECE8EA 100%);
+  font-family:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
+  line-height:1.5;
+}
+
+.syllabus{
+  width:min(1180px,calc(100% - 28px));
+  margin:28px auto 42px;
+  overflow:hidden;
+  border:1px solid #DED7DA;
+  border-radius:18px;
+  background:var(--paper);
+  box-shadow:0 24px 60px rgba(35,31,32,.14);
+}
+
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+.hero{
+  position:relative;
+  min-height:620px;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 12% 88%,rgba(255,14,73,.18),transparent 31%),
+    linear-gradient(112deg,#171416 0%,#241C1F 70%,#F30048 70%,#FF0E49 100%);
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:380px;
+  height:380px;
+  right:-150px;
+  top:-130px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:50%;
+}
+
+.hero:after{
+  content:"»";
+  position:absolute;
+  right:64px;
+  bottom:46px;
+  color:#fff;
+  font-size:112px;
+  font-weight:900;
+  line-height:1;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+  min-height:620px;
+  padding:56px 68px 54px;
+}
+
+.brand-row{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.brand{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 16px;
+  border-radius:9px;
+  color:var(--pink);
+  background:#fff;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  font-size:34px;
+  font-weight:900;
+  line-height:1;
+}
+
+.brand small{
+  color:var(--dark-2);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.hero-year{
+  padding-top:4px;
+  color:#241D20;
+  font-size:24px;
+  font-weight:700;
+  letter-spacing:4px;
+}
+
+.hero-main{
+  max-width:760px;
+  margin-top:105px;
+}
+
+.kicker{
+  margin-bottom:17px;
+  color:#FF7BA2;
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  margin:0;
+  color:#fff;
+  font-size:clamp(42px,5.2vw,66px);
+  line-height:1.02;
+  font-weight:500;
+  letter-spacing:-1.2px;
+  text-transform:uppercase;
+}
+
+.hero h1 strong{
+  font-weight:900;
+}
+
+.hero-copy{
+  max-width:700px;
+  margin-top:20px;
+  color:#E7DEE1;
+  font-size:19px;
+  line-height:1.48;
+  font-weight:500;
+}
+
+.hero-rule{
+  width:64%;
+  height:2px;
+  margin-top:48px;
+  background:linear-gradient(90deg,var(--pink),transparent);
+}
+
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+  max-width:690px;
+  margin-top:18px;
+}
+
+.stat strong{
+  display:block;
+  color:#fff;
+  font-size:24px;
+  font-weight:600;
+}
+
+.stat span{
+  display:block;
+  margin-top:3px;
+  color:#AAA0A4;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   CONTENIDO
+========================================================= */
+
+.content{
+  padding:48px 62px 58px;
+}
+
+.section{
+  margin:0 0 42px;
+  scroll-margin-top:18px;
+}
+
+.section:last-child{
+  margin-bottom:0;
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin:0 0 18px;
+  color:var(--dark-2);
+  font-size:31px;
+  line-height:1.1;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.section-no{
+  display:inline-flex;
+  flex:0 0 40px;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  color:#fff;
+  background:var(--pink);
+  font-size:15px;
+  font-weight:900;
+  box-shadow:0 0 0 7px rgba(255,14,73,.08);
+}
+
+
+/* DATOS */
+
+.data-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:13px;
+}
+
+.data-card{
+  min-height:102px;
+  padding:18px 16px;
+  border:1px solid #E6DEE1;
+  border-radius:12px;
+  background:#fff;
+  box-shadow:0 7px 18px rgba(35,31,32,.04);
+}
+
+.data-card span{
+  display:block;
+  color:var(--pink);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.75px;
+  text-transform:uppercase;
+}
+
+.data-card strong{
+  display:block;
+  margin-top:8px;
+  color:var(--dark-2);
+  font-size:22px;
+}
+
+
+/* SUMILLA */
+
+.lead-box{
+  padding:22px 24px;
+  border-left:6px solid var(--pink);
+  border-radius:0 14px 14px 0;
+  background:linear-gradient(90deg,#FFF0F5,#FFF9FB);
+}
+
+.lead-box p{
+  margin:0;
+  color:#4C4548;
+  font-size:18px;
+  line-height:1.58;
+  font-weight:500;
+  text-align:justify;
+}
+
+
+/* LOGRO */
+
+.highlight{
+  padding:25px 26px;
+  border-radius:14px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 95% 10%,rgba(255,14,73,.25),transparent 34%),
+    linear-gradient(135deg,#1C181A,#481126);
+}
+
+.highlight strong{
+  display:block;
+  margin-bottom:8px;
+  color:#fff;
+  font-size:22px;
+}
+
+.highlight p{
+  margin:0;
+  color:#EEE6E9;
+  font-size:18px;
+  line-height:1.55;
+  font-weight:500;
+}
+
+
+/* COMPETENCIA */
+
+.competency-card{
+  padding:22px 24px;
+  border:1px solid #E8DFE2;
+  border-radius:13px;
+  background:#FAF8F9;
+}
+
+.competency-card strong{
+  color:var(--dark-2);
+  font-size:21px;
+}
+
+.competency-card p{
+  margin:8px 0 0;
+  color:#51494C;
+  font-size:17px;
+  line-height:1.55;
+  font-weight:500;
+}
+
+
+/* =========================================================
+   MÓDULOS
+========================================================= */
+
+.module-card{
+  margin:0 0 22px;
+  overflow:hidden;
+  border:1px solid #D2C8CC;
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 8px 20px rgba(35,31,32,.04);
+}
+
+.module-card:last-child{
+  margin-bottom:0;
+}
+
+.module-head{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  border-bottom:1px solid #D2C8CC;
+}
+
+.module-label{
+  padding:19px 20px;
+  color:#fff;
+  background:linear-gradient(135deg,#E70045,#FF0E49);
+  font-size:15px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.module-value{
+  padding:19px 20px;
+  color:var(--dark-2);
+  font-size:22px;
+  font-weight:800;
+}
+
+.module-row{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  border-top:1px solid #DDD5D8;
+}
+
+.module-row .left{
+  padding:17px 20px;
+  color:#fff;
+  background:#FF0E49;
+  font-size:14px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.module-row .right{
+  padding:17px 20px;
+  color:#453E41;
+  font-size:17px;
+  line-height:1.5;
+  font-weight:500;
+}
+
+ul.clean{
+  margin:0;
+  padding-left:20px;
+}
+
+ul.clean li{
+  margin:5px 0;
+}
+
+ul.clean li::marker{
+  color:var(--pink);
+}
+
+
+/* ESTRATEGIAS */
+
+.strategy-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+.strategy{
+  padding:20px 21px;
+  border:1px solid #E7DEE1;
+  border-radius:12px;
+  background:#fff;
+}
+
+.strategy strong{
+  display:block;
+  color:var(--pink);
+  font-size:19px;
+}
+
+.strategy p{
+  margin:7px 0 0;
+  color:#514A4C;
+  font-size:16px;
+  line-height:1.5;
+  font-weight:500;
+}
+
+
+/* =========================================================
+   TABLAS
+========================================================= */
+
+.table-wrap{
+  width:100%;
+  overflow-x:auto;
+  border-radius:12px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+
+.eval-table,
+.route-table{
+  font-size:16px;
+}
+
+.eval-table th,
+.route-table th{
+  padding:12px 10px;
+  border:1px solid #999194;
+  color:#fff;
+  background:linear-gradient(135deg,#E00044,#FF0E49);
+  font-size:13px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.eval-table td,
+.route-table td{
+  padding:13px 12px;
+  border:1px solid #AEA6A9;
+  vertical-align:top;
+  color:#3F393B;
+  line-height:1.4;
+  font-weight:500;
+}
+
+.eval-table .rubric{
+  width:20%;
+  color:#fff;
+  background:#F20A4B;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.eval-table .code{
+  width:8%;
+  font-weight:900;
+  text-align:center;
+}
+
+.eval-table .weight{
+  width:9%;
+  color:var(--dark-2);
+  font-size:21px;
+  font-weight:900;
+  text-align:center;
+}
+
+.formula-row td{
+  padding:14px;
+  color:#fff;
+  background:#E90044;
+  font-size:18px;
+  font-weight:900;
+  text-align:center;
+}
+
+.route-table .module-col{
+  width:8%;
+  color:#fff;
+  background:#F20A4B;
+  font-size:28px;
+  font-weight:900;
+  text-align:center;
+  vertical-align:middle;
+}
+
+.route-table .topic-col{
+  width:31%;
+}
+
+.route-table h4{
+  margin:0;
+  color:#242022;
+  font-size:18px;
+  line-height:1.35;
+}
+
+.route-table ul{
+  margin:0;
+  padding-left:18px;
+}
+
+.route-table li{
+  margin:4px 0;
+}
+
+.route-table li::marker{
+  color:var(--pink);
+}
+
+
+/* TRABAJO */
+
+.work-box{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  overflow:hidden;
+  margin-top:18px;
+  border:1px solid #AAA2A5;
+  border-radius:11px;
+}
+
+.work-box .label{
+  padding:20px;
+  color:#fff;
+  background:#E90044;
+  font-size:19px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.work-content{
+  padding:20px;
+  color:#403A3C;
+  font-size:17px;
+  line-height:1.5;
+  font-weight:500;
+}
+
+
+/* RECURSOS */
+
+.resource-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:13px;
+}
+
+.resource-card{
+  padding:19px 20px;
+  border:1px solid #E6DDE0;
+  border-radius:12px;
+  background:#fff;
+}
+
+.resource-card strong{
+  display:block;
+  color:var(--pink);
+  font-size:18px;
+}
+
+.resource-card p{
+  margin:7px 0 0;
+  color:#514A4C;
+  font-size:16px;
+  line-height:1.5;
+  font-weight:500;
+}
+
+
+/* BIBLIOGRAFÍA */
+
+.references{
+  margin:0;
+  padding-left:20px;
+}
+
+.references li{
+  margin:9px 0;
+  color:#514A4C;
+  font-size:16px;
+  line-height:1.5;
+  font-weight:500;
+}
+
+.references li::marker{
+  color:var(--pink);
+}
+
+
+/* CERTIFICACIÓN */
+
+.cert-box{
+  padding:25px;
+  border-radius:14px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 94% 10%,rgba(255,14,73,.28),transparent 34%),
+    linear-gradient(135deg,#1D191B,#4B1027);
+}
+
+.cert-box strong{
+  display:block;
+  color:#fff;
+  font-size:22px;
+}
+
+.cert-box p{
+  margin:10px 0 0;
+  color:#E7DEE1;
+  font-size:17px;
+  line-height:1.52;
+  font-weight:500;
+}
+
+.cert-box em{
+  display:block;
+  margin-top:12px;
+  color:#FFB2CA;
+  font-size:16px;
+}
+
+
+/* FOOTER */
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-top:46px;
+  padding:22px 62px;
+  border-top:1px solid #E5DDE0;
+  color:#8A8185;
+  background:#FAF8F9;
+  font-size:13px;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+}
+
+.footer strong{
+  color:var(--pink);
+}
+
+
+/* PDF */
+
+.pdf-download-float{
+  position:fixed;
+  right:22px;
+  top:22px;
+  z-index:9999;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  min-height:52px;
+  padding:13px 19px;
+  border:0;
+  border-radius:999px;
+  color:#fff;
+  background:linear-gradient(135deg,#241F21 0%,#4A1026 58%,#FF0E49 100%);
+  box-shadow:0 14px 30px rgba(35,31,32,.26);
+  font-family:inherit;
+  font-size:16px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:820px){
+
+  .hero-inner{
+    padding:42px 30px 44px;
+  }
+
+  .content{
+    padding:38px 28px 44px;
+  }
+
+  .data-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .strategy-grid,
+  .resource-list{
+    grid-template-columns:1fr;
+  }
+
+  .module-head,
+  .module-row{
+    grid-template-columns:175px 1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero{
+    min-height:690px;
+  }
+
+  .hero-inner{
+    padding:32px 18px 38px;
+  }
+
+  .hero-main{
+    margin-top:75px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero-stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .content{
+    padding:30px 16px 36px;
+  }
+
+  .data-grid{
+    grid-template-columns:1fr;
+  }
+
+  .module-head,
+  .module-row{
+    grid-template-columns:1fr;
+  }
+
+  .work-box{
+    grid-template-columns:1fr;
+  }
+
+  .eval-table,
+  .route-table{
+    min-width:760px;
+  }
+
+}
+
+
+/* IMPRESIÓN */
+
+@media print{
+
+  @page{
+    size:A4;
+    margin:8mm;
+  }
+
+  body{
+    background:#fff;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  .syllabus{
+    width:100%;
+    margin:0;
+    border:0;
+    box-shadow:none;
+  }
+
+  .hero{
+    min-height:275mm;
+    break-after:page;
+  }
+
+  .pdf-download-float{
+    display:none;
+  }
+
+  .section-title,
+  .module-head,
+  tr{
+    break-inside:avoid;
+  }
+
+  .footer{
+    display:none;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<main class="syllabus">
+
+
+<!-- =========================================================
+     PORTADA
+========================================================= -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="brand-row">
+
+      <div class="brand">
+        <strong>SISE»</strong>
+        <small>Instituto Superior</small>
+      </div>
+
+      <div class="hero-year">
+        2026
+      </div>
+
+    </div>
+
+
+    <div class="hero-main">
+
+      <div class="kicker">
+        Programa de capacitación docente
+      </div>
+
+
+      <h1>
+        <strong>
+          Evaluaciones Inteligentes,
+          Auténticas y por Competencias
+        </strong>
+      </h1>
+
+
+      <p class="hero-copy">
+        Diseño e implementación de estrategias de evaluación auténtica
+        alineadas a competencias y desempeños observables,
+        incorporando evidencias significativas, instrumentos,
+        retroalimentación formativa y uso responsable de
+        Inteligencia Artificial.
+      </p>
+
+
+      <div class="hero-rule"></div>
+
+
+      <div class="hero-stats">
+
+        <div class="stat">
+          <strong>8 H</strong>
+          <span>Horas</span>
+        </div>
+
+        <div class="stat">
+          <strong>2 meses</strong>
+          <span>Vigencia</span>
+        </div>
+
+        <div class="stat">
+          <strong>4</strong>
+          <span>Módulos</span>
+        </div>
+
+        <div class="stat">
+          <strong>Online</strong>
+          <span>Asíncrono</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<div class="content">
+
+
+<!-- =========================================================
+     1 DATOS
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">1</span>
+    Datos generales
+  </h2>
+
+
+  <div class="data-grid">
+
+    <div class="data-card">
+      <span>Condición</span>
+      <strong>PAC Docente</strong>
+    </div>
+
+    <div class="data-card">
+      <span>Vigencia del curso</span>
+      <strong>2 meses</strong>
+    </div>
+
+    <div class="data-card">
+      <span>Horas</span>
+      <strong>8 horas</strong>
+    </div>
+
+    <div class="data-card">
+      <span>Modalidad</span>
+      <strong>Online asíncrono</strong>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     2 SUMILLA
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">2</span>
+    Sumilla
+  </h2>
+
+
+  <div class="lead-box">
+
+    <p>
+      El curso <strong>Evaluaciones Inteligentes, Auténticas y por Competencias</strong>
+      es de naturaleza teórico-práctica y se desarrolla bajo un enfoque por
+      competencias orientado a la innovación pedagógica, la evaluación auténtica
+      y la mejora continua de los procesos de enseñanza-aprendizaje.
+      Tiene como propósito que el docente diseñe estrategias de evaluación
+      alineadas a competencias y desempeños observables, integrando evidencias
+      auténticas, criterios de evaluación claros, instrumentos pertinentes y
+      procesos de retroalimentación formativa.
+      Asimismo, incorpora el uso responsable y transparente de herramientas de
+      Inteligencia Artificial como apoyo al diseño evaluativo, preservando la
+      integridad académica y el juicio profesional docente.
+      Para ello se abordarán la evaluación para el aprendizaje, el diagnóstico
+      de evidencias, el diseño inverso, la construcción de evidencias auténticas,
+      el diseño de instrumentos, la retroalimentación formativa, el uso
+      responsable de IA y la integración e implementación de estrategias de
+      evaluación aplicables al contexto educativo SISE.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     3 LOGRO
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">3</span>
+    Logro destacado del curso
+  </h2>
+
+
+  <div class="highlight">
+
+    <strong>
+      ¿Qué lograrás?
+    </strong>
+
+    <p>
+      Diseñar una estrategia innovadora de evaluación auténtica por competencias,
+      integrando criterios, instrumentos, retroalimentación formativa,
+      uso responsable de IA y apoyo del Asistente de Evaluaciones
+      “Instrumentos de Evaluación”, para mejorar la calidad de los procesos
+      de enseñanza-aprendizaje en SISE con pertinencia, ética e impacto formativo.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     4 COMPETENCIA
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">4</span>
+    Competencias por desarrollar
+  </h2>
+
+
+  <div class="competency-card">
+
+    <strong>
+      C6 · Investigación e Innovación
+    </strong>
+
+    <p>
+      Habilidad para buscar, analizar e interpretar información,
+      diseñar y aplicar metodologías de investigación y evaluación auténtica,
+      y generar propuestas innovadoras que contribuyan a la mejora
+      de los procesos de enseñanza-aprendizaje.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     5 ORGANIZACIÓN
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">5</span>
+    Organización del aprendizaje
+  </h2>
+
+
+  <!-- M1 -->
+
+  <article class="module-card">
+
+    <div class="module-head">
+
+      <div class="module-label">
+        Módulo de aprendizaje #1
+      </div>
+
+      <div class="module-value">
+        Diagnóstico de la evaluación auténtica
+      </div>
+
+    </div>
+
+
+    <div class="module-row">
+
+      <div class="left">
+        Resultado de aprendizaje
+      </div>
+
+      <div class="right">
+        Diagnosticar prácticas evaluativas actuales para identificar
+        brechas entre evidencias, competencias y desempeños esperados,
+        utilizando una matriz de análisis en contexto docente SISE.
+      </div>
+
+    </div>
+
+
+    <div class="module-row">
+
+      <div class="left">
+        Contenidos involucrados
+      </div>
+
+      <div class="right">
+
+        <ul class="clean">
+
+          <li>Evaluación para el aprendizaje.</li>
+          <li>Evaluación auténtica y evaluación formativa.</li>
+          <li>Desempeño observable.</li>
+          <li>Evidencias de aprendizaje.</li>
+          <li>Evaluación tradicional y evaluación auténtica.</li>
+          <li>Diagnóstico de evidencias actuales.</li>
+          <li>Criterios de autenticidad, pertinencia y transferencia.</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+
+  <!-- M2 -->
+
+  <article class="module-card">
+
+    <div class="module-head">
+
+      <div class="module-label">
+        Módulo de aprendizaje #2
+      </div>
+
+      <div class="module-value">
+        Diseño inverso y evidencias auténticas
+      </div>
+
+    </div>
+
+
+    <div class="module-row">
+
+      <div class="left">
+        Resultado de aprendizaje
+      </div>
+
+      <div class="right">
+        Diseñar evidencias auténticas alineadas a resultados
+        de aprendizaje y competencias, aplicando diseño inverso
+        en un curso real.
+      </div>
+
+    </div>
+
+
+    <div class="module-row">
+
+      <div class="left">
+        Contenidos involucrados
+      </div>
+
+      <div class="right">
+
+        <ul class="clean">
+
+          <li>Diseño inverso.</li>
+          <li>Alineamiento constructivo.</li>
+          <li>Competencias y resultados de aprendizaje.</li>
+          <li>Evidencias suficientes.</li>
+          <li>Criterios observables.</li>
+          <li>Situaciones auténticas y transferencia del aprendizaje.</li>
+          <li>Productos integradores.</li>
+          <li>Mix evaluativo.</li>
+          <li>IA y TIC para apoyar el diseño.</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+
+  <!-- M3 -->
+
+  <article class="module-card">
+
+    <div class="module-head">
+
+      <div class="module-label">
+        Módulo de aprendizaje #3
+      </div>
+
+      <div class="module-value">
+        Instrumentos, criterios y uso responsable de IA
+      </div>
+
+    </div>
+
+
+    <div class="module-row">
+
+      <div class="left">
+        Resultado de aprendizaje
+      </div>
+
+      <div class="right">
+        Construir instrumentos de evaluación con criterios observables,
+        niveles de desempeño y uso responsable de IA,
+        empleando el Asistente de Evaluaciones
+        “Instrumentos de Evaluación”.
+      </div>
+
+    </div>
+
+
+    <div class="module-row">
+
+      <div class="left">
+        Contenidos involucrados
+      </div>
+
+      <div class="right">
+
+        <ul class="clean">
+
+          <li>Rúbricas, listas de cotejo y guías de observación.</li>
+          <li>Criterios observables e indicadores de logro.</li>
+          <li>Niveles de desempeño y progresión cualitativa.</li>
+          <li>Retroalimentación formativa.</li>
+          <li>Transparencia, autoría, verificación y responsabilidad.</li>
+          <li>Uso responsable y transparente de Inteligencia Artificial.</li>
+          <li>Asistente de Evaluaciones “Instrumentos de Evaluación”.</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+
+  <!-- M4 -->
+
+  <article class="module-card">
+
+    <div class="module-head">
+
+      <div class="module-label">
+        Módulo de aprendizaje #4
+      </div>
+
+      <div class="module-value">
+        Estrategia final de evaluación auténtica
+      </div>
+
+    </div>
+
+
+    <div class="module-row">
+
+      <div class="left">
+        Resultado de aprendizaje
+      </div>
+
+      <div class="right">
+        Integrar una estrategia de evaluación auténtica aplicable
+        a un curso real, articulando evidencias, instrumentos,
+        retroalimentación y criterios éticos de uso de IA.
+      </div>
+
+    </div>
+
+
+    <div class="module-row">
+
+      <div class="left">
+        Contenidos involucrados
+      </div>
+
+      <div class="right">
+
+        <ul class="clean">
+
+          <li>Integración de la estrategia evaluativa.</li>
+          <li>Alineamiento y coherencia entre componentes.</li>
+          <li>Viabilidad y condiciones de implementación.</li>
+          <li>Comunicación transparente de criterios.</li>
+          <li>Implementación, seguimiento y mejora.</li>
+          <li>Plan de evidencias.</li>
+          <li>Retroalimentación y toma de decisiones.</li>
+          <li>Uso responsable de IA durante la implementación.</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+
+<!-- =========================================================
+     6 ESTRATEGIAS
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">6</span>
+    Estrategias de aprendizaje
+  </h2>
+
+
+  <div class="strategy-grid">
+
+    <article class="strategy">
+
+      <strong>
+        Aprendizaje Basado en Problemas
+      </strong>
+
+      <p>
+        Permite analizar situaciones reales de evaluación,
+        identificar brechas y proponer soluciones alineadas
+        al enfoque por competencias.
+      </p>
+
+    </article>
+
+
+    <article class="strategy">
+
+      <strong>
+        Método de Casos
+      </strong>
+
+      <p>
+        Facilita el análisis crítico de experiencias evaluativas
+        y la toma de decisiones para rediseñar evidencias
+        e instrumentos.
+      </p>
+
+    </article>
+
+
+    <article class="strategy">
+
+      <strong>
+        Aprendizaje Basado en la Acción
+      </strong>
+
+      <p>
+        Promueve la construcción progresiva de productos
+        aplicables a la práctica docente desde AA1
+        hasta el Caso Integrador.
+      </p>
+
+    </article>
+
+
+    <article class="strategy">
+
+      <strong>
+        Autoaprendizaje Guiado
+      </strong>
+
+      <p>
+        Favorece la reflexión profesional y la mejora continua
+        mediante análisis, rediseño, aplicación y metacognición.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     7 EVALUACIÓN
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">7</span>
+    Sistema de evaluación
+  </h2>
+
+
+  <div class="table-wrap">
+
+    <table class="eval-table">
+
+      <colgroup>
+        <col style="width:20%">
+        <col style="width:8%">
+        <col style="width:63%">
+        <col style="width:9%">
+      </colgroup>
+
+
+      <thead>
+
+        <tr>
+          <th>Evaluaciones</th>
+          <th>Cód.</th>
+          <th>Evidencia de aprendizaje</th>
+          <th>Peso</th>
+        </tr>
+
+      </thead>
+
+
+      <tbody>
+
+
+        <tr>
+
+          <td class="rubric">
+            Actividad Módulo 1
+          </td>
+
+          <td class="code">
+            AA1
+          </td>
+
+          <td>
+            <strong>
+              Diagnóstico de una evidencia real.
+            </strong>
+            <br>
+            Identificación de brechas entre competencia,
+            resultado de aprendizaje, evidencia y desempeño observable.
+            <br>
+            <strong>Evidencia:</strong>
+            Matriz diagnóstica de evidencia actual.
+            <br>
+            <strong>Instrumento:</strong>
+            Lista de cotejo.
+          </td>
+
+          <td class="weight">
+            15%
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td class="rubric">
+            Actividad Módulo 2
+          </td>
+
+          <td class="code">
+            AA2
+          </td>
+
+          <td>
+            <strong>
+              Rediseño de evidencia auténtica.
+            </strong>
+            <br>
+            Transformación de una evidencia tradicional en una
+            evidencia auténtica alineada al resultado de aprendizaje
+            y al desempeño esperado.
+            <br>
+            <strong>Evidencia:</strong>
+            Evidencia auténtica rediseñada mediante diseño inverso.
+            <br>
+            <strong>Instrumento:</strong>
+            Lista de cotejo.
+          </td>
+
+          <td class="weight">
+            15%
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td class="rubric">
+            Actividad Módulo 3
+          </td>
+
+          <td class="code">
+            AA3
+          </td>
+
+          <td>
+            <strong>
+              Construcción y validación del instrumento.
+            </strong>
+            <br>
+            Instrumento alineado con la evidencia auténtica,
+            criterios observables, niveles de desempeño,
+            retroalimentación y criterio de uso responsable de IA.
+            <br>
+            <strong>Evidencia:</strong>
+            Instrumento final + ficha de construcción y mejora.
+            <br>
+            <strong>Instrumento:</strong>
+            Rúbrica de coevaluación.
+          </td>
+
+          <td class="weight">
+            20%
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td class="rubric">
+            Participación
+          </td>
+
+          <td class="code">
+            PA
+          </td>
+
+          <td>
+            <strong>
+              Participación en foros, reflexión y retroalimentación entre pares.
+            </strong>
+            <br>
+            Incluye comentarios, actividades reflexivas,
+            autoevaluaciones y procesos de coevaluación.
+          </td>
+
+          <td class="weight">
+            10%
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td class="rubric">
+            Estrategia final
+          </td>
+
+          <td class="code">
+            AA4
+          </td>
+
+          <td>
+            <strong>
+              Estrategia final de evaluación auténtica y plan de implementación.
+            </strong>
+            <br>
+            Integra AA1, AA2 y AA3 en una propuesta coherente:
+            contexto, brecha inicial, evidencia auténtica,
+            instrumento, retroalimentación, uso responsable de IA,
+            plan de implementación, riesgos y compromiso de aplicación.
+            <br>
+            <strong>Instrumento:</strong>
+            Rúbrica analítica de 4 criterios.
+          </td>
+
+          <td class="weight">
+            20%
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td class="rubric">
+            Caso Integrador
+          </td>
+
+          <td class="code">
+            CI
+          </td>
+
+          <td>
+            <strong>
+              Aplicación real de la estrategia en aula.
+            </strong>
+            <br>
+            Evidencia la transferencia del proceso AA1 → AA4
+            mediante implementación real, entre 2 y 4 evidencias
+            visuales, instrumento aplicado, retroalimentación,
+            declaración de IA cuando corresponda y reflexión final.
+            <br>
+            <strong>Instrumento:</strong>
+            Rúbrica de coevaluación de 4 criterios.
+          </td>
+
+          <td class="weight">
+            20%
+          </td>
+
+        </tr>
+
+
+
+        <tr class="formula-row">
+
+          <td colspan="4">
+            NF = 15% (AA1) + 15% (AA2) + 20% (AA3) +
+            10% (PA) + 20% (AA4) + 20% (CI)
+          </td>
+
+        </tr>
+
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     8 ACTIVIDADES
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">8</span>
+    Actividades principales
+  </h2>
+
+
+  <div class="table-wrap">
+
+    <table class="route-table">
+
+      <colgroup>
+        <col style="width:8%">
+        <col style="width:31%">
+        <col style="width:61%">
+      </colgroup>
+
+
+      <thead>
+
+        <tr>
+          <th>Módulo</th>
+          <th>Tema</th>
+          <th>Contenido</th>
+        </tr>
+
+      </thead>
+
+
+      <tbody>
+
+
+        <!-- M1 -->
+
+        <tr>
+
+          <td class="module-col" rowspan="2">
+            1
+          </td>
+
+          <td class="topic-col">
+            <h4>
+              TEMA 01 · Evaluación para el aprendizaje
+            </h4>
+          </td>
+
+          <td>
+            <ul>
+              <li>Evaluar competencias es evaluar desempeños.</li>
+              <li>¿Qué hace auténtica a una evidencia?</li>
+              <li>Evaluación tradicional y evaluación auténtica.</li>
+              <li>¿Dónde está mi evidencia?</li>
+            </ul>
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td class="topic-col">
+            <h4>
+              TEMA 02 · Diagnóstico de evidencias actuales
+            </h4>
+          </td>
+
+          <td>
+            <ul>
+              <li>Análisis de una evidencia real utilizada en un curso propio.</li>
+              <li>Relación entre resultado, desempeño y evidencia actual.</li>
+              <li>Identificación del tipo de evaluación utilizado.</li>
+              <li>Autenticidad, pertinencia, viabilidad y transferencia.</li>
+            </ul>
+          </td>
+
+        </tr>
+
+
+
+        <!-- M2 -->
+
+        <tr>
+
+          <td class="module-col" rowspan="2">
+            2
+          </td>
+
+          <td class="topic-col">
+            <h4>
+              TEMA 03 · Diseño inverso y coherencia de la evaluación
+            </h4>
+          </td>
+
+          <td>
+            <ul>
+              <li>Coherencia pedagógica de la evaluación.</li>
+              <li>Diseño inverso: comenzar por el aprendizaje esperado.</li>
+              <li>Action Mapping aplicado a la evaluación.</li>
+            </ul>
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td class="topic-col">
+            <h4>
+              TEMA 04 · Evidencia auténtica y Mix Evaluativo
+            </h4>
+          </td>
+
+          <td>
+            <ul>
+              <li>¿Qué hace auténtica a una evidencia?</li>
+              <li>Niveles de autenticidad.</li>
+              <li>Tipos de evaluación y Mix Evaluativo.</li>
+              <li>IA y TIC para apoyar el diseño.</li>
+            </ul>
+          </td>
+
+        </tr>
+
+
+
+        <!-- M3 -->
+
+        <tr>
+
+          <td class="module-col" rowspan="2">
+            3
+          </td>
+
+          <td class="topic-col">
+            <h4>
+              TEMA 05 · Construcción de instrumentos de evaluación
+            </h4>
+          </td>
+
+          <td>
+            <ul>
+              <li>De la evidencia auténtica al instrumento.</li>
+              <li>Tipos de instrumentos y criterios de selección.</li>
+              <li>Criterios observables e indicadores de logro.</li>
+              <li>Niveles de desempeño y progresión cualitativa.</li>
+              <li>Uso del Asistente de Evaluaciones.</li>
+            </ul>
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td class="topic-col">
+            <h4>
+              TEMA 06 · Criterios, retroalimentación y uso responsable de IA
+            </h4>
+          </td>
+
+          <td>
+            <ul>
+              <li>Retroalimentación formativa: reconocer, precisar y orientar.</li>
+              <li>Transparencia, autoría, verificación y responsabilidad.</li>
+              <li>Criterio institucional de uso responsable y transparente de IA.</li>
+              <li>Integración de retroalimentación y niveles de desempeño.</li>
+            </ul>
+          </td>
+
+        </tr>
+
+
+
+        <!-- M4 -->
+
+        <tr>
+
+          <td class="module-col" rowspan="2">
+            4
+          </td>
+
+          <td class="topic-col">
+            <h4>
+              TEMA 07 · Integración de la estrategia evaluativa
+            </h4>
+          </td>
+
+          <td>
+            <ul>
+              <li>Integración de resultado, evidencia, criterios, instrumento y retroalimentación.</li>
+              <li>Revisión de alineamiento, autenticidad y observabilidad.</li>
+              <li>Viabilidad, retroalimentación y uso responsable de IA.</li>
+              <li>Actividades de refuerzo para ajustar la estrategia antes de AA4.</li>
+            </ul>
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td class="topic-col">
+            <h4>
+              TEMA 08 · Implementación, seguimiento y mejora
+            </h4>
+          </td>
+
+          <td>
+            <ul>
+              <li>Del diseño al plan de implementación.</li>
+              <li>Comunicación transparente de criterios y condiciones.</li>
+              <li>Guion de implementación: antes, durante y después.</li>
+              <li>Plan de evidencias para documentar la aplicación.</li>
+              <li>Preparación de AA4 y Caso Integrador.</li>
+            </ul>
+          </td>
+
+        </tr>
+
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+
+  <div class="work-box">
+
+    <div class="label">
+      Ruta final
+    </div>
+
+    <div class="work-content">
+
+      <strong>
+        De diagnóstico a transformación
+      </strong>
+
+      <br><br>
+
+      <strong>AA1:</strong>
+      diagnostica una evidencia real e identifica brechas.
+
+      <br>
+
+      <strong>AA2:</strong>
+      rediseña la evidencia para hacer visible un desempeño auténtico.
+
+      <br>
+
+      <strong>AA3:</strong>
+      construye el instrumento con criterios, niveles y uso responsable de IA.
+
+      <br>
+
+      <strong>AA4:</strong>
+      integra la estrategia y planifica su implementación.
+
+      <br>
+
+      <strong>Caso Integrador:</strong>
+      aplica la estrategia en aula, recoge evidencias,
+      reflexiona sobre la experiencia y participa en coevaluación.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     9 RECURSOS
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">9</span>
+    Recursos y materiales
+  </h2>
+
+
+  <div class="resource-list">
+
+
+    <article class="resource-card">
+
+      <strong>
+        Plataforma Aula Virtual
+      </strong>
+
+      <p>
+        Espacio de gestión del aprendizaje utilizado para
+        contenidos, actividades, tareas, foros, coevaluación
+        y seguimiento del curso.
+      </p>
+
+    </article>
+
+
+    <article class="resource-card">
+
+      <strong>
+        Asistente de Evaluaciones
+      </strong>
+
+      <p>
+        Asistente institucional “Instrumentos de Evaluación”
+        utilizado para apoyar la construcción y revisión
+        de instrumentos evaluativos.
+      </p>
+
+    </article>
+
+
+    <article class="resource-card">
+
+      <strong>
+        Plantillas y recursos interactivos
+      </strong>
+
+      <p>
+        Matrices diagnósticas, plantillas de diseño inverso,
+        checklists, microinteractivos, guías, casos,
+        bancos de ejemplos y recursos HTML.
+      </p>
+
+    </article>
+
+
+    <article class="resource-card">
+
+      <strong>
+        Lineamientos institucionales
+      </strong>
+
+      <p>
+        Lineamientos para la Evaluación de los Aprendizajes,
+        lineamientos de uso de IA para docentes y estudiantes,
+        y Declaración Jurada sobre Uso Ético de IA.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     10 REFERENCIAS
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">10</span>
+    Referencias bibliográficas
+  </h2>
+
+
+  <ul class="references">
+
+    <li>
+      SISE. (2025).
+      <em>
+        Lineamientos para la Evaluación de los Aprendizajes
+        (DAG-GC-LEA-05, versión 01).
+      </em>
+      Dirección Académica General - Gestión Curricular.
+    </li>
+
+    <li>
+      SISE.
+      <em>
+        Ficha Maestra de Diseño Instruccional:
+        Evaluaciones Inteligentes, Auténticas y por Competencias.
+      </em>
+    </li>
+
+    <li>
+      SISE.
+      <em>
+        Lineamiento de Uso de Inteligencia Artificial para Estudiantes.
+      </em>
+    </li>
+
+    <li>
+      SISE.
+      <em>
+        Lineamiento de Uso de Inteligencia Artificial para Docentes.
+      </em>
+    </li>
+
+    <li>
+      SISE.
+      <em>
+        Declaración Jurada sobre el Uso Ético de Inteligencia Artificial.
+      </em>
+    </li>
+
+    <li>
+      Black, P., & Wiliam, D. (1998).
+      <em>Assessment and classroom learning.</em>
+      Assessment in Education, 5(1), 7-74.
+    </li>
+
+    <li>
+      Brookhart, S. M. (2013).
+      <em>
+        How to Create and Use Rubrics for Formative Assessment and Grading.
+      </em>
+      ASCD.
+    </li>
+
+    <li>
+      Hattie, J., & Timperley, H. (2007).
+      <em>The power of feedback.</em>
+      Review of Educational Research, 77(1), 81-112.
+    </li>
+
+    <li>
+      Nicol, D. J., & Macfarlane-Dick, D. (2006).
+      <em>
+        Formative assessment and self-regulated learning.
+      </em>
+      Studies in Higher Education, 31(2), 199-218.
+    </li>
+
+    <li>
+      Wiggins, G. (1998).
+      <em>Educative Assessment.</em>
+      Jossey-Bass.
+    </li>
+
+    <li>
+      Wiggins, G., & McTighe, J. (2005).
+      <em>Understanding by Design.</em>
+      ASCD.
+    </li>
+
+    <li>
+      UNESCO. (2023).
+      <em>
+        Guidance for generative AI in education and research.
+      </em>
+      UNESCO.
+    </li>
+
+  </ul>
+
+</section>
+
+
+
+<!-- =========================================================
+     11 CERTIFICACIÓN
+========================================================= -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">11</span>
+    Certificación
+  </h2>
+
+
+  <div class="cert-box">
+
+    <strong>
+      Certificación digital por aprobación
+    </strong>
+
+    <p>
+      Será emitida y notificada vía correo electrónico
+      en un plazo de quince días calendarios contados
+      a partir del día siguiente de culminada la actividad.
+      La aprobación del curso requiere una
+      <strong>nota mínima final de diecisiete (17)</strong>.
+      Solo los participantes aprobados podrán recibir
+      la certificación correspondiente.
+    </p>
+
+    <em>
+      “El presente certificado no es conducente
+      a grado o título profesional”.
+    </em>
+
+  </div>
+
+</section>
+
+
+</div>
+
+
+<footer class="footer">
+
+  <span>
+    Plan Anual de Capacitación Docente 2026 · Instituto SISE
+  </span>
+
+  <strong>
+    #HAZLABIEN
+  </strong>
+
+</footer>
+
+
+</main>
+
+
+
+<!-- BOTÓN PDF -->
+
+<button
+  class="pdf-download-float"
+  type="button"
+  onclick="window.print()"
+  aria-label="Imprimir o guardar sílabo como PDF">
+
+  ↓ Descargar sílabo en PDF
+
+</button>
+
+
+</body>
+</html>
