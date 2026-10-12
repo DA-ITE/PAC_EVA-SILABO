@@ -844,6 +844,36 @@ table{
 
 }
 
+
+
+/* Ajustes de impresión para PDF continuo y compacto */
+@media print{
+  @page{size:A4;margin:6mm 7mm 6mm}
+  html,body{width:100%!important;margin:0!important;padding:0!important;background:#fff!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  body{line-height:1.32!important}
+  .syllabus{width:100%!important;max-width:none!important;margin:0!important;overflow:visible!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+  .hero{height:285mm!important;min-height:285mm!important;max-height:285mm!important;overflow:hidden!important;break-after:page!important;page-break-after:always!important}
+  .hero-inner{height:100%!important;min-height:0!important;padding:17mm 13mm 13mm!important}
+  .hero-main{max-width:150mm!important;margin-top:29mm!important}
+  .hero h1{font-size:30pt!important;line-height:1.02!important}
+  .hero-copy{max-width:150mm!important;font-size:11.5pt!important;line-height:1.32!important}
+  .hero-rule{margin-top:11mm!important}
+  .hero-stats{max-width:150mm!important;margin-top:4.5mm!important}
+  .content{padding:0!important}
+  .section{margin:0 0 3mm!important;padding:0!important;break-inside:auto!important;page-break-inside:auto!important}
+  .section-title{margin:0 0 2mm!important;font-size:15.5pt!important;gap:2.4mm!important;break-after:avoid-page!important;page-break-after:avoid!important}
+  .section-no{width:7mm!important;height:7mm!important;flex-basis:7mm!important;font-size:8pt!important;box-shadow:none!important}
+  .data-grid{gap:2mm!important}.data-card{min-height:0!important;padding:2.4mm!important;box-shadow:none!important}.data-card span{font-size:7.8pt!important}.data-card strong{font-size:11.5pt!important;margin-top:.8mm!important}
+  .lead-box{padding:2.8mm 3.2mm!important}.lead-box p{font-size:9.2pt!important;line-height:1.23!important}
+  .highlight{padding:3mm!important}.highlight strong{font-size:11.5pt!important}.highlight p{font-size:9.2pt!important;line-height:1.23!important}
+  .competency-card{padding:2.8mm!important}.competency-card strong{font-size:10.8pt!important}.competency-card p{font-size:9.2pt!important;line-height:1.22!important}
+  .module-card{margin-bottom:2mm!important;box-shadow:none!important;break-inside:auto!important;page-break-inside:auto!important}.module-head,.module-row{grid-template-columns:38mm 1fr!important;break-inside:avoid!important;page-break-inside:avoid!important}.module-label,.module-value,.module-row .left,.module-row .right{padding:1.9mm 2.3mm!important}.module-label{font-size:8.1pt!important}.module-value{font-size:10.6pt!important}.module-row .left{font-size:7.7pt!important}.module-row .right{font-size:8.6pt!important;line-height:1.17!important}ul.clean{padding-left:3.4mm!important}ul.clean li{margin:.45mm 0!important}
+  .strategy-grid{gap:1.8mm!important}.strategy{padding:2.2mm!important}.strategy strong{font-size:10pt!important}.strategy p{font-size:8.5pt!important;line-height:1.18!important;margin-top:1mm!important}
+  .table-wrap{overflow:visible!important;border-radius:0!important}table{width:100%!important;table-layout:fixed!important;border-collapse:collapse!important}thead{display:table-header-group!important}tr{break-inside:avoid!important;page-break-inside:avoid!important}.eval-table,.route-table{font-size:8pt!important}.eval-table th,.route-table th{padding:1.2mm 1mm!important;font-size:7.1pt!important}.eval-table td,.route-table td{padding:1.25mm 1.15mm!important;font-size:7.8pt!important;line-height:1.12!important}.eval-table .weight{font-size:10.3pt!important}.formula-row td{padding:1.7mm!important;font-size:9pt!important}.route-table .module-col{font-size:15pt!important}.route-table h4{font-size:8.3pt!important;line-height:1.1!important}.route-table ul{padding-left:3mm!important}.route-table li{margin:.15mm 0!important}
+  .resource-list{gap:1.8mm!important}.resource-card{padding:2.3mm!important}.resource-card strong{font-size:9.5pt!important}.resource-card p{font-size:8.2pt!important;line-height:1.17!important;margin-top:1mm!important}.references{padding-left:3.2mm!important}.references li{margin:.55mm 0!important;font-size:8.2pt!important;line-height:1.15!important}.cert-box{padding:2.4mm 2.8mm!important}.cert-box strong{font-size:10.2pt!important}.cert-box p{font-size:8.1pt!important;line-height:1.14!important;margin-top:1.2mm!important}.cert-box em{font-size:8pt!important;margin-top:.8mm!important}
+  .footer,.pdf-download-float{display:none!important}
+}
+
 </style>
 </head>
 
@@ -1285,7 +1315,7 @@ table{
       </div>
 
       <div class="module-value">
-        Estrategia final de evaluación auténtica
+        Integración de la evaluación auténtica
       </div>
 
     </div>
@@ -1389,8 +1419,8 @@ table{
 
       <p>
         Promueve la construcción progresiva de productos
-        aplicables a la práctica docente desde AA1
-        hasta el Caso Integrador.
+        aplicables a la práctica docente a lo largo de los módulos
+        y como preparación para la Evaluación final.
       </p>
 
     </article>
@@ -1453,208 +1483,58 @@ table{
 
       <tbody>
 
-
         <tr>
-
-          <td class="rubric">
-            Actividad Módulo 1
-          </td>
-
-          <td class="code">
-            AA1
-          </td>
-
-          <td>
-            <strong>
-              Diagnóstico de una evidencia real.
-            </strong>
-            <br>
-            Identificación de brechas entre competencia,
-            resultado de aprendizaje, evidencia y desempeño observable.
-            <br>
-            <strong>Evidencia:</strong>
-            Matriz diagnóstica de evidencia actual.
-            <br>
-            <strong>Instrumento:</strong>
-            Lista de cotejo.
-          </td>
-
-          <td class="weight">
-            15%
-          </td>
-
+          <td class="rubric">Actividad Módulo 1</td>
+          <td class="code">AA1</td>
+          <td><strong>Comprensión de los aprendizajes del módulo:</strong> Reconocimiento y aplicación de los principales conceptos desarrollados en el módulo, evidenciado mediante un quiz de conocimientos.</td>
+          <td class="weight">15%</td>
         </tr>
 
-
-
         <tr>
-
-          <td class="rubric">
-            Actividad Módulo 2
-          </td>
-
-          <td class="code">
-            AA2
-          </td>
-
-          <td>
-            <strong>
-              Rediseño de evidencia auténtica.
-            </strong>
-            <br>
-            Transformación de una evidencia tradicional en una
-            evidencia auténtica alineada al resultado de aprendizaje
-            y al desempeño esperado.
-            <br>
-            <strong>Evidencia:</strong>
-            Evidencia auténtica rediseñada mediante diseño inverso.
-            <br>
-            <strong>Instrumento:</strong>
-            Lista de cotejo.
-          </td>
-
-          <td class="weight">
-            15%
-          </td>
-
+          <td class="rubric">Actividad Módulo 2</td>
+          <td class="code">AA2</td>
+          <td><strong>Comprensión de los aprendizajes del módulo:</strong> Reconocimiento y aplicación de los principales conceptos desarrollados en el módulo, evidenciado mediante un quiz de conocimientos.</td>
+          <td class="weight">15%</td>
         </tr>
 
-
-
         <tr>
-
-          <td class="rubric">
-            Actividad Módulo 3
-          </td>
-
-          <td class="code">
-            AA3
-          </td>
-
-          <td>
-            <strong>
-              Construcción y validación del instrumento.
-            </strong>
-            <br>
-            Instrumento alineado con la evidencia auténtica,
-            criterios observables, niveles de desempeño,
-            retroalimentación y criterio de uso responsable de IA.
-            <br>
-            <strong>Evidencia:</strong>
-            Instrumento final + ficha de construcción y mejora.
-            <br>
-            <strong>Instrumento:</strong>
-            Rúbrica de coevaluación.
-          </td>
-
-          <td class="weight">
-            20%
-          </td>
-
+          <td class="rubric">Actividad Módulo 3</td>
+          <td class="code">AA3</td>
+          <td><strong>Comprensión de los aprendizajes del módulo:</strong> Reconocimiento y aplicación de los principales conceptos desarrollados en el módulo, evidenciado mediante un quiz de conocimientos.</td>
+          <td class="weight">15%</td>
         </tr>
 
-
-
         <tr>
-
-          <td class="rubric">
-            Participación
-          </td>
-
-          <td class="code">
-            PA
-          </td>
-
-          <td>
-            <strong>
-              Participación en foros, reflexión y retroalimentación entre pares.
-            </strong>
-            <br>
-            Incluye comentarios, actividades reflexivas,
-            autoevaluaciones y procesos de coevaluación.
-          </td>
-
-          <td class="weight">
-            10%
-          </td>
-
+          <td class="rubric">Actividad Módulo 4</td>
+          <td class="code">AA4</td>
+          <td><strong>Comprensión de los aprendizajes del módulo:</strong> Reconocimiento y aplicación de los principales conceptos desarrollados en el módulo, evidenciado mediante un quiz de conocimientos.</td>
+          <td class="weight">15%</td>
         </tr>
 
-
-
         <tr>
-
-          <td class="rubric">
-            Estrategia final
-          </td>
-
-          <td class="code">
-            AA4
-          </td>
-
-          <td>
-            <strong>
-              Estrategia final de evaluación auténtica y plan de implementación.
-            </strong>
-            <br>
-            Integra AA1, AA2 y AA3 en una propuesta coherente:
-            contexto, brecha inicial, evidencia auténtica,
-            instrumento, retroalimentación, uso responsable de IA,
-            plan de implementación, riesgos y compromiso de aplicación.
-            <br>
-            <strong>Instrumento:</strong>
-            Rúbrica analítica de 4 criterios.
-          </td>
-
-          <td class="weight">
-            20%
-          </td>
-
+          <td class="rubric">Participación</td>
+          <td class="code">PA</td>
+          <td><strong>Participación en foros y actividades colaborativas:</strong> Interacción, reflexión y aportes en espacios de intercambio.</td>
+          <td class="weight">10%</td>
         </tr>
 
-
-
         <tr>
-
-          <td class="rubric">
-            Caso Integrador
-          </td>
-
-          <td class="code">
-            CI
-          </td>
-
-          <td>
-            <strong>
-              Aplicación real de la estrategia en aula.
-            </strong>
-            <br>
-            Evidencia la transferencia del proceso AA1 → AA4
-            mediante implementación real, entre 2 y 4 evidencias
-            visuales, instrumento aplicado, retroalimentación,
-            declaración de IA cuando corresponda y reflexión final.
-            <br>
-            <strong>Instrumento:</strong>
-            Rúbrica de coevaluación de 4 criterios.
-          </td>
-
-          <td class="weight">
-            20%
-          </td>
-
+          <td class="rubric">Evaluación final</td>
+          <td class="code">EF</td>
+          <td><strong>Integración de los aprendizajes del curso:</strong> Comprensión y aplicación de los principales conceptos desarrollados a lo largo del curso, evidenciada mediante un quiz integrador.</td>
+          <td class="weight">30%</td>
         </tr>
 
-
+        <tr>
+          <td class="rubric">Coevaluación práctica (opcional)</td>
+          <td class="code">COE</td>
+          <td><strong>Integración práctica de los aprendizajes:</strong> Aplicación progresiva de los contenidos desarrollados en los módulos mediante una actividad práctica con retroalimentación entre pares. Su participación es opcional y no tiene ponderación en la nota final.</td>
+          <td class="weight">NA</td>
+        </tr>
 
         <tr class="formula-row">
-
-          <td colspan="4">
-            NF = 15% (AA1) + 15% (AA2) + 20% (AA3) +
-            10% (PA) + 20% (AA4) + 20% (CI)
-          </td>
-
+          <td colspan="4">NF = 15% (AA1) + 15% (AA2) + 15% (AA3) + 15% (AA4) + 10% (PA) + 30% (EF)</td>
         </tr>
-
 
       </tbody>
 
@@ -1863,7 +1743,7 @@ table{
               <li>Integración de resultado, evidencia, criterios, instrumento y retroalimentación.</li>
               <li>Revisión de alineamiento, autenticidad y observabilidad.</li>
               <li>Viabilidad, retroalimentación y uso responsable de IA.</li>
-              <li>Actividades de refuerzo para ajustar la estrategia antes de AA4.</li>
+              <li>Actividades de refuerzo para consolidar los aprendizajes del Módulo 4.</li>
             </ul>
           </td>
 
@@ -1884,7 +1764,7 @@ table{
               <li>Comunicación transparente de criterios y condiciones.</li>
               <li>Guion de implementación: antes, durante y después.</li>
               <li>Plan de evidencias para documentar la aplicación.</li>
-              <li>Preparación de AA4 y Caso Integrador.</li>
+              <li>Preparación para la Actividad Módulo 4 y la Evaluación final.</li>
             </ul>
           </td>
 
@@ -1894,50 +1774,6 @@ table{
       </tbody>
 
     </table>
-
-  </div>
-
-
-
-  <div class="work-box">
-
-    <div class="label">
-      Ruta final
-    </div>
-
-    <div class="work-content">
-
-      <strong>
-        De diagnóstico a transformación
-      </strong>
-
-      <br><br>
-
-      <strong>AA1:</strong>
-      diagnostica una evidencia real e identifica brechas.
-
-      <br>
-
-      <strong>AA2:</strong>
-      rediseña la evidencia para hacer visible un desempeño auténtico.
-
-      <br>
-
-      <strong>AA3:</strong>
-      construye el instrumento con criterios, niveles y uso responsable de IA.
-
-      <br>
-
-      <strong>AA4:</strong>
-      integra la estrategia y planifica su implementación.
-
-      <br>
-
-      <strong>Caso Integrador:</strong>
-      aplica la estrategia en aula, recoge evidencias,
-      reflexiona sobre la experiencia y participa en coevaluación.
-
-    </div>
 
   </div>
 
